@@ -64,10 +64,10 @@ const App = () => {
     await window.ethereum.request({                     /* Updated */
       method: "eth_requestAccounts",
     })
-    .then((accounts:[]) => {                            /* New */
-      setError(false)                                   /* New */
-      updateWallet(accounts)                            /* New */
-    })                                                  /* New */
+    .then((accounts:[]) => {                            
+      setError(false)                                   
+      updateWallet(accounts)                            
+    })                                                 
     .catch((err:any) => {                               /* New */
       setError(true)                                    /* New */
       setErrorMessage(err.message)                      /* New */
